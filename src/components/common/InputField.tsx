@@ -20,7 +20,7 @@ const InputField: React.FC<IInputFieldProps> = ({ placeholder, label, type, valu
         {Icon && <Icon className="absolute top-1/2 translate-x-4 -translate-y-1/2 text-[#999] text-xl" />}
         <input
             className={
-                classNames("w-full border-2 p-3 border-solid border-[#999] rounded text-sm focus:border-primary focus:outline-primary", className, {"pl-12": !!Icon})
+                classNames("w-full border-2 p-3 border-solid border-[#999] rounded text-sm focus:border-sociala-primary focus:outline-sociala-primary", className, {"pl-12": !!Icon})
             }
             placeholder={placeholder}
             type={type}

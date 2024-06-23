@@ -12,7 +12,7 @@ interface IButtonProps {
 
 const Button: React.FC<IButtonProps> = ({ children, className, type = "button", size = ButtonSize.MD }) => {
     return <>
-        <button type={type} className={classNames("relative text-center border-2 w-full border-[#999] font-semibold hover:bg-primary hover:text-[#fff] hover:border-primary", {
+        <button type={type} className={classNames("relative text-center border-2 w-full border-[#999] font-semibold hover:bg-sociala-primary hover:text-[#fff] hover:border-sociala-primary", {
             "": size === ButtonSize.SM,
             "rounded-md p-2": size === ButtonSize.MD,
             "rounded-lg p-4": size === ButtonSize.LG,
