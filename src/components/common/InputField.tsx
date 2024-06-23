@@ -11,10 +11,12 @@ interface IInputFieldProps {
     value?: string;
     className?: string;
     Icon?: IconType
-    onChange?: (value: string) => void;
+    // onChange?: (value: string) => void;
+    [key: string]: any
 }
 
-const InputField: React.FC<IInputFieldProps> = ({ placeholder, label, type, value, className, Icon }) => {
+const InputField: React.FC<IInputFieldProps> = ({ placeholder, label, type, value, className, Icon, ...props }) => {
+    console.log(props, "props")
     return <div className="relative">
         {/* <MdOutlineMailOutline className="absolute top-1/2 translate-x-4 -translate-y-1/2 text-[#999] text-xl"/> */}
         {Icon && <Icon className="absolute top-1/2 translate-x-4 -translate-y-1/2 text-[#999] text-xl" />}
@@ -25,6 +27,7 @@ const InputField: React.FC<IInputFieldProps> = ({ placeholder, label, type, valu
             placeholder={placeholder}
             type={type}
             value={value}
+            {...props}
         />
     </div>
 }
