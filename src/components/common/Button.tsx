@@ -1,22 +1,26 @@
-import ButtonSize, { ButtonSizeType } from "@/types/constants/ButtonSize";
+import React from "react";
 import classNames from "classnames";
 
+import ButtonSize, { ButtonSizeType } from "@/types/constants/ButtonSize";
+
 interface IButtonProps {
-    label: string;
     className?: string;
     type?: "button" | "submit"
-    size: ButtonSizeType
+    size?: ButtonSizeType
+    children: React.ReactNode
 }
 
-const Button: React.FC<IButtonProps> = ({ label, className, type = "button", size = ButtonSize.MD }) => {
+const Button: React.FC<IButtonProps> = ({ children, className, type = "button", size = ButtonSize.MD }) => {
     return <>
-        <button type={type} className={classNames("relative", {
+        <button type={type} className={classNames("relative text-center border-2 w-full border-[#999] font-semibold hover:bg-primary hover:text-[#fff] hover:border-primary", {
             "": size === ButtonSize.SM,
-            "": size === ButtonSize.MD,
-            "": size === ButtonSize.LG,
+            "rounded-md p-2": size === ButtonSize.MD,
+            "rounded-lg p-4": size === ButtonSize.LG,
 
         }, className)}>
-            {label}
+            {children}
         </button>
     </>
 }
+
+export default Button;

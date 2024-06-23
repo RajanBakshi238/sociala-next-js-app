@@ -8,7 +8,8 @@ const config: Config = {
   ],
   theme: {
     colors: {
-      primary: '#0055FF'
+      primary: '#0055FF',
+      "light-grey": '#999'
     },
     extend: {
       backgroundImage: {

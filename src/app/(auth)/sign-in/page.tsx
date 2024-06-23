@@ -1,4 +1,6 @@
+import Button from "@/components/common/Button";
 import InputField from "@/components/common/InputField";
+import ButtonSize from "@/types/constants/ButtonSize";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
 
@@ -18,7 +20,24 @@ export default function Page() {
                     <div className="mb-3">
                         <InputField type="password" placeholder="Password" Icon={RiLockPasswordLine} />
                     </div>
-                    
+                    <div className="mb-3 flex justify-between">
+                        <div className="">
+
+                        </div>
+                        <span className="text-sm font-semibold text-[#343A40]">Forgot your Password ?</span>
+                    </div>
+                    <div className="mb-3">
+                        <Button className="bg-[#343A40] text-[#fff] border-none" size={ButtonSize.LG}>Login</Button>
+                    </div>
+                </div>
+                <h6 className="text-sm font-semibold text-light-grey mb-6">
+                    Don't have account <span className="text-primary font-bold">Register</span>
+                </h6>
+                <div className="">
+                    <h6 className="text-sm text-center font-semibold text-light-grey mb-3">Or, Sign in with your social account</h6>
+                    <Button size="lg" className="mb-3 bg-primary text-[#fff] border-none">Sign in with Google</Button>
+                    <Button size="lg" className="bg-[#3b5999] text-[#fff] border-none">Sign in witth Facebook</Button>
+
                 </div>
             </div>
         </div>
