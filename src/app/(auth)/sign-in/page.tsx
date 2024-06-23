@@ -6,10 +6,10 @@ export default function Page() {
     return <div className="grid grid-cols-2 h-100">
         <div className='h-screen bg-cover bg-[url("../../public/images/login-bg.jpg")]'>
         </div>
-        <div className="h-screen">
-            <div>
-                <div>
-                    <h1>Login into your account</h1>
+        <div className="h-screen flex items-center justify-center">
+            <div className="w-[50%]">
+                <div className="mb-4">
+                    <h1 className="font-bold text-3xl">Login into your account</h1>
                 </div>
                 <div>
                     <div className="mb-3">

@@ -1,10 +1,10 @@
 import React from "react"
 import classNames from "classnames";
 
-import { InputType } from "@/types/constants/INPUT_TYPES";
+import { InputType } from "@/types/constants/InputTypes";
 import { IconType } from "react-icons";
 
-interface IInputField {
+interface IInputFieldProps {
     label?: string;
     placeholder?: string;
     type: InputType;
@@ -14,7 +14,7 @@ interface IInputField {
     onChange?: (value: string) => void;
 }
 
-const InputField: React.FC<IInputField> = ({ placeholder, label, type, value, className, Icon }) => {
+const InputField: React.FC<IInputFieldProps> = ({ placeholder, label, type, value, className, Icon }) => {
     return <div className="relative">
         {/* <MdOutlineMailOutline className="absolute top-1/2 translate-x-4 -translate-y-1/2 text-[#999] text-xl"/> */}
         {Icon && <Icon className="absolute top-1/2 translate-x-4 -translate-y-1/2 text-[#999] text-xl" />}
