@@ -23,12 +23,8 @@ interface IRegisterForm {
 
 
 const RegisterModal = () => {
-    const { register, handleSubmit, formState } = useForm<IRegisterForm>()
-
+    const { register, handleSubmit, formState, watch } = useForm<IRegisterForm>()
     const onSubmit: SubmitHandler<IRegisterForm> = (data) => console.log(data);
-
-    console.log(formState.validatingFields,">>>>>>>> ")
-
     return <>
         <Dialog>
             <DialogTrigger asChild>
